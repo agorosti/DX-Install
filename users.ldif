@@ -1,0 +1,35 @@
+dn: uid=andres,ou=users,dc=europesip,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+cn: andres gorostidi
+sn: andres
+uid: andres
+userPassword: Cft6yhn2025
+givenname: gorostidi
+mail: andres@europesip.com
+preferredLanguage: en_us
+title: IT Architect
+telephoneNumber: 649987632
+
+#dn: uid=wpsadmin,ou=users,dc=europesip,dc=com
+#objectClass: inetOrgPerson
+#uid: wpsadmin
+#cn: wpsadmin
+#sn: wpsadmin
+#userPassword: Cft6yhn2025
+
+dn: uid=wpsbind,ou=users,dc=europesip,dc=com
+objectClass: inetOrgPerson
+uid: wpsbind
+cn: wpsbind
+sn: wpsbind
+userPassword: Cft6yhn2025
+
+dn: cn=wpsadmins,ou=groups,dc=europesip,dc=com
+objectClass: groupOfNames
+cn: wpsadmins
+member: uid=andres,ou=users,dc=europesip,dc=com
+member: uid=wpsbind,ou=users,dc=europesip,dc=com
+member: uid=dx_user,ou=users,dc=europesip,dc=com

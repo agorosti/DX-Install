@@ -1,0 +1,63 @@
+images:
+  imagePullSecrets:
+  - name: regcred
+  repository: hclcr.io
+networking:
+  addon:
+    contentComposer:
+      corsOrigin:
+      - https://hcldev.europesip.com
+    damPluginGoogleVision:
+      corsOrigin:
+      - https://hcldev.europesip.com
+    damPluginKaltura:
+      corsOrigin:
+      - https://hcldev.europesip.com
+    digitalAssetManagement:
+      corsOrigin:
+      - https://hcldev.europesip.com
+    imageProcessor:
+      corsOrigin:
+      - https://hcldev.europesip.com
+    ringApi:
+      corsOrigin:
+      - https://hcldev.europesip.com
+  core:
+    contextRoot: wps
+    host: hcldev.europesip.com
+  haproxy:
+    serviceType: ClusterIP
+security:
+  core:
+    configWizardPassword: Cft6yhn2025
+    wasPassword: Cft6yhn2025
+    wpsPassword: Cft6yhn2025
+  remoteSearch:
+    wasPassword: Cft6yhn2025
+volumes:
+  core:
+    log:
+      storageClassName: longhorn-rwo
+    profile:
+      storageClassName: longhorn-rwx
+    tranlog:
+      storageClassName: longhorn-rwo
+  digitalAssetManagement:
+    binaries:
+      storageClassName: longhorn-rwx
+  licenseManager:
+    data:
+      storageClassName: longhorn-rwo
+  openLdap:
+    certificate:
+      storageClassName: longhorn-rwo
+    ldap:
+      storageClassName: longhorn-rwo
+    slapd:
+      storageClassName: longhorn-rwo
+  persistenceNode:
+    database:
+      storageClassName: longhorn-rwo
+  remoteSearch:
+    prsprofile:
+      storageClassName: longhorn-rwo
